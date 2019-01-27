@@ -1,0 +1,187 @@
+[gd_resource type="TileSet" load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Textures/Outside/bush.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Textures/Outside/cactus.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Textures/Outside/dirt.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Textures/Outside/dirt_to_sand.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Textures/Outside/metal_fence.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Textures/Outside/mushrooms.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Textures/Outside/sand.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Textures/Outside/wooden_fence.png" type="Texture" id=8]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -3.93633, -4.0935, 5.02335, 6.44728, 4.75983, 11.9812, 0.0164719, 10.6636, -5.51744, 1.96745, -6.30801, -3.30294 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0.0164719, 10.6636, -4.72688, 11.9812, -5.51744, 1.96745 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -12.896, -1.98535, -12.896, -11.7356, -9.20672, -11.7356, -8.67968, -5.67462, -9.73376, 1.17689 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -9.73376, 1.17689, -8.67968, -5.67462, -6.30801, -3.30294, -5.51744, 1.96745 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 8.4491, -5.67462, 10.5573, -6.99222, 12.4019, -5.93814, 12.1384, 3.81209, 8.4491, -0.404228 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 6.34094, 1.44041, 8.4491, -0.404228, 12.1384, 3.81209, 10.0302, 5.92024, 5.02335, 6.44728 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 6.34094, 1.44041, 5.02335, 6.44728, -3.93633, -4.0935, 4.75983, -0.931267 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 1.33406, -14.8978, 4.49631, -11.7356, 4.75983, -0.931267, -3.93633, -4.0935, -3.93633, -11.4721, -1.82817, -14.8978 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, -16, 16, -16, 16.2364, -11.9991, -15.6495, -11.7356 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, -16, 16, -16, 16.2364, -11.9991, -15.6495, -11.7356 )
+
+[resource]
+
+0/name = "bush"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/is_autotile = false
+0/occluder_offset = Vector2( 16, 16 )
+0/navigation_offset = Vector2( 16, 16 )
+0/shapes = [  ]
+1/name = "cactus"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/is_autotile = false
+1/occluder_offset = Vector2( 16, 16 )
+1/navigation_offset = Vector2( 16, 16 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+2/name = "dirt"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 16, 16 )
+2/navigation_offset = Vector2( 16, 16 )
+2/shapes = [  ]
+3/name = "dirt_to_sand"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/is_autotile = false
+3/occluder_offset = Vector2( 16, 16 )
+3/navigation_offset = Vector2( 16, 16 )
+3/shapes = [  ]
+4/name = "metal_fence"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/is_autotile = false
+4/occluder_offset = Vector2( 16, 16 )
+4/navigation_offset = Vector2( 16, 16 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+5/name = "mushrooms"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/is_autotile = false
+5/occluder_offset = Vector2( 16, 16 )
+5/navigation_offset = Vector2( 16, 16 )
+5/shapes = [  ]
+6/name = "sand"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/is_autotile = false
+6/occluder_offset = Vector2( 16, 16 )
+6/navigation_offset = Vector2( 16, 16 )
+6/shapes = [  ]
+7/name = "wooden_fence"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/is_autotile = false
+7/occluder_offset = Vector2( 16, 16 )
+7/navigation_offset = Vector2( 16, 16 )
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+_sections_unfolded = [ "7" ]
+

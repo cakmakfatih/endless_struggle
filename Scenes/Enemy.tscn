@@ -1,0 +1,296 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://Scenes/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_01.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_02.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_03.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_04.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_05.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_06.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_07.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_08.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_09.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_10.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_11.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_down/blue_down_12.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_25.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_26.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_27.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_28.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_29.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_30.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_31.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_32.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_33.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_34.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_35.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_right/blue_right_36.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_13.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_14.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_15.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_16.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_17.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_18.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_19.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_20.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_21.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_22.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_23.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Enemies/monster_blue/blue_left/blue_left_24.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/HUD/enemy_health_empty.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/HUD/enemy_health_full.png" type="Texture" id=39]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.6781, 22.0477 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "attack"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 0.5
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.382813, 0.251221, 0.251221, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ), Vector2( 0.2, 0.2 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 0.4
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.956863, 0.262745, 0.211765, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "down",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.6487, 23.4412 )
+
+[sub_resource type="CircleShape2D" id=7]
+
+custom_solver_bias = 0.0
+radius = 336.852
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 39.7843, 31.5461 )
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"enemy",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+speed = 120
+
+[node name="Area2D" type="Area2D" parent="." index="0" groups=[
+"enemy",
+]]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 0.045577, 5.04103 )
+scale = Vector2( 1.07176, 1.24046 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/attack = SubResource( 2 )
+anims/die = SubResource( 3 )
+anims/got_hit = SubResource( 4 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+
+frames = SubResource( 5 )
+animation = "up"
+frame = 6
+playing = true
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="DestroyTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = false
+
+[node name="HealthBar" type="TextureProgress" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -28.0
+margin_top = -41.0
+margin_right = 28.0
+margin_bottom = -32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 38 )
+texture_over = null
+texture_progress = ExtResource( 39 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = true
+_sections_unfolded = [ "Textures" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
+
+position = Vector2( 0, 4.82375 )
+scale = Vector2( 1, 1.18243 )
+shape = SubResource( 6 )
+
+[node name="Mover" type="Area2D" parent="." index="6"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mover" index="0"]
+
+shape = SubResource( 7 )
+
+[node name="AttackArea" type="Area2D" parent="." index="7"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" index="0"]
+
+position = Vector2( -0.440125, 6.85548 )
+scale = Vector2( 1, 1.24299 )
+shape = SubResource( 8 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_DestroyTimer_timeout"]
+
+[connection signal="body_entered" from="Mover" to="." method="_on_player_entered"]
+
+[connection signal="body_exited" from="Mover" to="." method="_on_player_exited"]
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_AttackArea_body_entered"]
+
+[connection signal="body_exited" from="AttackArea" to="." method="_on_AttackArea_body_exited"]
+
+

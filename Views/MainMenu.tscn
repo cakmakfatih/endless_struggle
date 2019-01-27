@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Views/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Main Menu/background.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Main Menu/play.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Main Menu/Logo.png" type="Texture" id=4]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="." index="0"]
+
+self_modulate = Color( 0.535156, 0.418091, 0.418091, 1 )
+position = Vector2( 395.11, 301.735 )
+scale = Vector2( 3.32532, 2.34796 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="play" type="Sprite" parent="." index="1"]
+
+position = Vector2( 368, 304 )
+scale = Vector2( 0.378874, 0.316643 )
+texture = ExtResource( 3 )
+
+[node name="Logo" type="Sprite" parent="." index="2"]
+
+position = Vector2( 368, 128 )
+scale = Vector2( 0.378874, 0.316643 )
+texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="." index="3"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 224.0
+margin_right = 496.0
+margin_bottom = 384.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Visibility" ]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+

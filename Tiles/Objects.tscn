@@ -1,0 +1,277 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Textures/Objects/bed1.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Textures/Objects/bed2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Textures/Objects/bone.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Textures/Objects/chest.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Textures/Objects/couch1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Textures/Objects/couch2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Textures/Objects/counter1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Textures/Objects/counter2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Textures/Objects/counter3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Textures/Objects/counter4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Textures/Objects/counter5.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Textures/Objects/fridge.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Textures/Objects/key.png" type="Texture" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.4954, 15.9417 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.7768, 10 )
+
+[node name="Objects" type="Node2D" index="0"]
+
+[node name="bed1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bed1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bed1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -12.7956, -9.30125, -9.19723, -9.17274, -8.8117, -7.75911, -4.18528, -7.6306, -3.79974, -8.91572, 3.65394, -8.91572, 4.2965, -7.75911, 9.05143, -7.6306, 9.30845, -9.04423, 12.6498, -9.04423, 13.0353, -5.57441, 11.4932, -5.4459, 11.7502, -0.433944, 12.9068, -0.433944, 13.1638, 2.90736, 11.7502, 3.03587, 12.1357, 15.887, -11.7675, 15.887, -11.7675, 3.2929, -12.9241, 3.16438, -13.1811, 0.0801048, -11.639, -0.30543, -11.639, -5.18888, -13.0526, -5.31739 )
+
+[node name="bed2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 64, 16 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bed2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bed2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -12.0484, -15.9158, -11.906, 4.73152, -13.0451, 5.3011, -12.9027, 8.43379, -9.34285, 8.71858, -9.20045, 7.72182, 9.73812, 7.86421, 9.73812, 8.57619, 12.586, 8.57619, 12.586, 5.3011, 11.7317, 5.01631, 12.0164, -15.9158 )
+
+[node name="bone" type="Sprite" parent="." index="2"]
+
+position = Vector2( 112, 16 )
+texture = ExtResource( 3 )
+
+[node name="chest" type="Sprite" parent="." index="3"]
+
+position = Vector2( 160, 16 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chest" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chest/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="couch1" type="Sprite" parent="." index="4"]
+
+position = Vector2( 16, 64 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="couch1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="couch1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -10.0018, -14.0539, 11.6868, -14.1699, 12.8466, -13.01, 13.0786, -11.0383, 13.7745, -11.0383, 13.7745, -6.51505, 12.7306, -5.93514, 12.6147, -4.42738, 11.4548, -3.73149, 11.6868, 15.6375, -7.79814, 15.7535, -13.9452, 15.8694, -14.0612, -4.8913, -13.0173, -5.23925, -12.2055, -6.28309, -11.0456, -7.21094, -10.6977, -10.4584, -9.88581, -11.3863 )
+
+[node name="couch2" type="Sprite" parent="." index="5"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="couch2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="couch2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.0818, -16.1403, 12.1775, -15.9698, 11.9217, 2.70154, 12.348, 4.40668, 13.8826, 4.91823, 13.8826, 9.69263, 12.7743, 9.60738, 12.7743, 11.483, 11.9217, 11.5683, 11.4954, 12.7619, -9.64839, 12.6766, -9.73365, 10.4599, -11.0125, 10.1189, -10.7567, 6.19708, -13.7407, 3.63937 )
+
+[node name="counter1" type="Sprite" parent="." index="6"]
+
+position = Vector2( 112, 64 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="counter1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="counter1/StaticBody2D" index="0"]
+
+position = Vector2( 0, -3.78427 )
+scale = Vector2( 1, 0.800828 )
+shape = SubResource( 2 )
+
+[node name="counter2" type="Sprite" parent="." index="7"]
+
+position = Vector2( 160, 64 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="counter2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="counter2/StaticBody2D" index="0"]
+
+position = Vector2( 3.60263, 0 )
+scale = Vector2( 0.810388, 1 )
+shape = SubResource( 3 )
+
+[node name="counter3" type="Sprite" parent="." index="8"]
+
+position = Vector2( 16, 111.708 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="counter3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="counter3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -15.8327, 8.3976, -8.53298, 8.68958, -8.53298, 16.2813, 15.702, 15.6973, 15.41, -15.8374, -15.8327, -16.1294 )
+
+[node name="counter4" type="Sprite" parent="." index="9"]
+
+position = Vector2( 64, 112 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="counter4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="counter4/StaticBody2D" index="0"]
+
+position = Vector2( 3.6814, 0 )
+scale = Vector2( 0.800956, 1 )
+shape = SubResource( 4 )
+
+[node name="counter5" type="Sprite" parent="." index="10"]
+
+position = Vector2( 112, 112 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="counter5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="counter5/StaticBody2D" index="0"]
+
+position = Vector2( 0, -3.05698 )
+scale = Vector2( 1, 1.23515 )
+shape = SubResource( 5 )
+
+[node name="fridge" type="Sprite" parent="." index="11"]
+
+position = Vector2( 160, 112 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fridge" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fridge/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16.0075, 5.87395, -12.511, 9.37044, 12.8384, 9.54526, 15.6356, 6.74808, 15.8104, -15.6294, -15.8327, -15.979 )
+
+[node name="key" type="Sprite" parent="." index="12"]
+
+position = Vector2( 16, 160 )
+texture = ExtResource( 13 )
+
+

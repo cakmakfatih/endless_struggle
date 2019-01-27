@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tiles/Market.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Rooms/market.png" type="Texture" id=2]
+
+[node name="Market" type="Node2D"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 175.17, 268.813 )
+scale = Vector2( 2.21038, 2.45702 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -78.3075, -110.009, -78.3075, -44.7964, -48.4019, -44.3204, -48.4019, -49.5564, -6.91997, -47.6524, -4.50823, -41.9404, -9.81407, -39.5604, -2.57883, -34.8004, 10.4445, -38.1324, 6.10341, -46.7004, 13.3386, -48.6044, 16.2327, -70.9765, 47.5853, -70.9765, 48.55, 18.5117, 26.362, 15.6557, 23.4679, 17.5597, 22.9856, 54.2118, -16.0846, 55.6398, -15.6022, 74.6799, -11.7434, 78.9639, -48.4019, 79.4399, -48.8842, 46.1198, -41.1667, 47.0718, -40.6843, -14.8084, -78.7898, -14.3324, -78.7898, 108.952, 77.0086, 109.904, 77.0086, -111.437 )
+
+[node name="Area2D" type="Area2D" parent="Sprite" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Sprite/Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -78.3075, -110.009, -78.3075, -44.7964, -48.4019, -44.3204, -48.4019, -49.5564, -6.91997, -47.6524, -4.50823, -41.9404, -9.81407, -39.5604, -2.57883, -34.8004, 10.4445, -38.1324, 6.10341, -46.7004, 13.3386, -48.6044, 16.2327, -70.9765, 47.5853, -70.9765, 48.55, 18.5117, 26.362, 15.6557, 23.4679, 17.5597, 22.9856, 54.2118, -16.0846, 55.6398, -15.6022, 74.6799, -11.7434, 78.9639, -48.4019, 79.4399, -48.8842, 46.1198, -41.1667, 47.0718, -40.6843, -14.8084, -78.7898, -14.3324, -78.7898, 108.952, 77.0086, 109.904, 77.0086, -111.437 )
+
+[connection signal="area_entered" from="Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
+
+
